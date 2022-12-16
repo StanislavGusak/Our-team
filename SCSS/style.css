@@ -65,16 +65,18 @@ a:focus {
   position: relative;
   padding: 15px;
 }
-.section .left .frame {
-  width: 100px;
-  height: 100px;
-  box-sizing: border-box;
-}
 .section .left__top {
   position: absolute;
   top: 0;
   left: 0;
   border-top: 1px solid #FFCC00;
+  border-left: 1px solid #FFCC00;
+}
+.section .left__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #FFCC00;
   border-left: 1px solid #FFCC00;
 }
 .section .left .right__top {
@@ -84,19 +86,17 @@ a:focus {
   border-top: 1px solid #FFCC00;
   border-right: 1px solid #FFCC00;
 }
-.section .left__bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #FFCC00;
-  border-left: 1px solid #FFCC00;
-}
 .section .left .right__bottom {
   position: absolute;
   bottom: 0;
   right: 0;
   border-bottom: 1px solid #FFCC00;
   border-right: 1px solid #FFCC00;
+}
+.section .left .frame {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
 }
 
 .center {

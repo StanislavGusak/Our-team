@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;500&family=Roboto:wght@900&display=swap');
  
-// veryables
+// variables
 
 $font-primary: Raleway;
 $font-secondary: Roboto;
@@ -84,27 +84,12 @@ a:focus {
         position: relative;
         padding: 15px;
 
-
-        .frame {
-            width: 100px;
-            height: 100px;
-            box-sizing: border-box;
-        }
-
         &__top {
             position: absolute;
             top: 0;
             left: 0;
             border-top: 1px solid $color-yellow;
             border-left: 1px solid $color-yellow;
-        }
-
-        .right__top {
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-top: 1px solid $color-yellow;
-            border-right: 1px solid $color-yellow;
         }
 
         &__bottom {
@@ -115,12 +100,26 @@ a:focus {
             border-left: 1px solid $color-yellow;
         }
 
+        .right__top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 1px solid $color-yellow;
+            border-right: 1px solid $color-yellow;
+        }
+        
         .right__bottom {
             position: absolute;
             bottom: 0;
             right: 0;
             border-bottom: 1px solid $color-yellow;
             border-right: 1px solid $color-yellow;
+        }
+
+        .frame {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
         }
     }
 }
