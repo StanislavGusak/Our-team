@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;500&family=Roboto:wght@900&display=swap');
+ 
+// veryables
+
+$font-primary: Raleway;
+$font-secondary: Roboto;
+$font-inner: Open Sans;
+
+$color-yellow: #FFCC00;
+$color-white: #FFFFFF;
+$color-graphit: #666666;
+$color-grey: #898F8F; 
+$color-light: #CCCCCC;
+$color-dark: #333333;
 
 .body {
     max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
-    Font-family: Raleway;
-    background: #FFFFFF;
-    color: #666666;
+    Font-family: $font-primary;
+    background: $color-white;
+    color: $color-graphit;
+}
+
+a:focus {
+    outline: none;
 }
 
 .main {
@@ -22,7 +39,7 @@
     align-items: center;
 
     .subtitle {
-        color: #898F8F;
+        color: $color-grey;
         font-weight: 500;
         Font-size: 18px;
         Line-height: 24px;
@@ -30,8 +47,8 @@
     }
 
     .title {
-        color: #FFCC00;
-        Font-family: Roboto;
+        color: $color-yellow;
+        Font-family: $font-secondary;
         font-weight: 900;
         Font-size: 60px;
         Line-height: 66px;
@@ -48,7 +65,7 @@
         &__inner {
             width: 210px;
             height: 1px;
-            background: #FFCC00;
+            background: $color-yellow;
         }
 
         &__icon {
@@ -78,32 +95,32 @@
             position: absolute;
             top: 0;
             left: 0;
-            border-top: 1px solid #FFCC00;
-            border-left: 1px solid #FFCC00;
+            border-top: 1px solid $color-yellow;
+            border-left: 1px solid $color-yellow;
         }
 
         .right__top {
             position: absolute;
             top: 0;
             right: 0;
-            border-top: 1px solid #FFCC00;
-            border-right: 1px solid #FFCC00;
+            border-top: 1px solid $color-yellow;
+            border-right: 1px solid $color-yellow;
         }
 
         &__bottom {
             position: absolute;
             bottom: 0;
             left: 0;
-            border-bottom: 1px solid #FFCC00;
-            border-left: 1px solid #FFCC00;
+            border-bottom: 1px solid $color-yellow;
+            border-left: 1px solid $color-yellow;
         }
 
         .right__bottom {
             position: absolute;
             bottom: 0;
             right: 0;
-            border-bottom: 1px solid #FFCC00;
-            border-right: 1px solid #FFCC00;
+            border-bottom: 1px solid $color-yellow;
+            border-right: 1px solid $color-yellow;
         }
     }
 }
@@ -111,7 +128,7 @@
 .center {
     width: 1px;
     height: 560px;
-    background: #FFCC00;
+    background: $color-yellow;
 }
 
 .right {
@@ -124,7 +141,7 @@
         text-align: center;
 
         &__subtitle {
-            Font-family: Roboto;
+            Font-family: $font-secondary;
             font-weight: 900;
             Font-size: 36px;
             Line-height: 42px;
@@ -133,12 +150,12 @@
         &__divider {
             width: 100px;
             height: 1px;
-            background: #FFCC00;
+            background: $color-yellow;
             margin: 30px auto;
         }
 
         &__inner {
-            Font-family: Raleway;
+            Font-family: $font-primary;
             font-weight: 400;
             Font-size: 24px;
             Line-height: 36px;
@@ -152,18 +169,44 @@
     align-items: center;
 
     &__list {
+        display: flex;
+        align-items: center;
         width: 30px;
         height: 30px;
         margin-top: 30px;
-        border: 2px solid #CCCCCC;
+        border: 2px solid $color-light;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
 
+        &:hover {
+            border: 2px solid $color-yellow;
+            transition: all .1s ease-in;
+            -webkit-transition: all .1s ease-in;
+            -moz-transition: all .1s ease-in;
+            -ms-transition: all .1s ease-in;
+            -o-transition: all .1s ease-in;
+        }
+
+        &:hover .icon {
+            color: $color-yellow;
+            transition: all .1s ease-in;
+            -webkit-transition: all .1s ease-in;
+            -moz-transition: all .1s ease-in;
+            -ms-transition: all .1s ease-in;
+            -o-transition: all .1s ease-in;
+        }
+
         &:not(:first-child) {
             margin-left: 5px;
+        }
+
+        .icon {
+            width: 100%;
+            height: 12px;
+            color: $color-light;
         }
     }
 }
@@ -172,11 +215,11 @@
     text-align: center;
     max-width: 430px;
     margin-top: 49px;
-    Font-family: Open Sans;
+    Font-family: $font-primary;
     font-weight: 700;
     Font-size: 14px;
     Line-height: 24px;
-    color: #333333;
+    color: $color-dark;
 }
 
 .decor {
@@ -187,13 +230,13 @@
     &__block {
         width: 10px;
         height: 4px;
-        background: #FFCC00;
+        background: $color-yellow;
     }
 
     &__center {
         width: 20px;
         height: 4px;
-        background: #FFCC00;
+        background: $color-yellow;
         margin: 0 5px;
     }
 }
@@ -202,11 +245,21 @@
     width: 118px;
     padding: 5px 10px;
     margin-top: 25px;
-    border: 1px solid #FFCC00;
+    border: 1px solid $color-yellow;
     text-transform: uppercase;
     background-color: transparent;
-    Font-family: Open Sans;
+    Font-family: $font-inner;
     font-weight: 700;
     Font-size: 14px;
     Line-height: 14px;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-yellow;
+        transition: all .1s ease-in;
+        -webkit-transition: all .1s ease-in;
+        -moz-transition: all .1s ease-in;
+        -ms-transition: all .1s ease-in;
+        -o-transition: all .1s ease-in;
+    }
 }
